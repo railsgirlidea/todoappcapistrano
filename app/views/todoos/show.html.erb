@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @todoo.name %>
+</p>
+
+<p>
+  <strong>Finished:</strong>
+  <%= @todoo.finished %>
+</p>
+
+<%= link_to 'Edit', edit_todoo_path(@todoo) %> |
+<%= link_to 'Back', todoos_path %>

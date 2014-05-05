@@ -1,0 +1,27 @@
+<h1>Listing todoos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Finished</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todoos.each do |todoo| %>
+      <tr>
+        <td><%= todoo.name %></td>
+        <td><%= todoo.finished %></td>
+        <td><%= link_to 'Show', todoo %></td>
+        <td><%= link_to 'Edit', edit_todoo_path(todoo) %></td>
+        <td><%= link_to 'Destroy', todoo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Todoo', new_todoo_path %>
